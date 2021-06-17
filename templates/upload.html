@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload Image</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'styles.css')}}">
+
+</head>
+
+<body>
+  <h1 class="upload">FACE LANDMARK LOCALIZATION FOR STATIC IMAGE</h1>
+  <p class="msg">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      {% for message in messages %}
+        {{ message }}
+      {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </p>
+
+  <form method="POST" action="/upload" enctype="multipart/form-data">
+  	<label>Upload image : </label>
+    <input type="file" name="file" autocomplete="off" required>
+    <br /><br />
+    <center>
+      <input type ="submit" value = " UPLOAD & LOCATE " class="btn">
+    </center>
+    </form>
+  <center>
+    <a href=live><button class="webbtn">LANDMARK FOR REAL - TIME STREAM</button></a></th>
+  </center>
+  {% if filename %}
+  <div>
+    <table>
+      <tr>
+        <th>
+          <p>UPLOADED IMAGE :</p>
+        </th>
+        <th>
+          <p>LANDMARKED IMAGE :</p>
+        </th>
+      </tr>
+      <br /><br />
+      <br />
+      <tr>
+        <td>
+          <img src="{{ url_for('display_image', filename=filename) }}" alt="Uploaded Image" class="imgup">
+        </td>
+        <td>
+          <img src="{{ url_for('landmarked_image_display', filename=filename) }}" alt="Predicted Image" class="imgup">
+        </td>
+      </tr>
+    </table>
+  </div>
+  {% endif %}
+</body>
+</html>

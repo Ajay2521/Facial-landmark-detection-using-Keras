@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Cam</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'styles.css')}}">
+
+</head>
+
+<body>
+
+  <div>
+    <h1 class="webcam">FACE LANDMARK LOCALIZATION FOR REAL - TIME STREAM</h1>
+    <img src="{{ url_for('webcam') }}", alt="LIVE WEBCAM" class="webcamimg">
+  </div>
+  <br />
+  <center><a href=upload><button class="webbtn">LANDMARK FOR STATIC IMAGE</button></a></center>
+
+</body>
+</html>

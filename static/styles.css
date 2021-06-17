@@ -1,0 +1,145 @@
+body{
+  background-image: linear-gradient(to right, #1E90FF,#00BFFF);
+}
+
+button, .btn{
+	border-radius: 30px;
+	color: white;
+	background-color: black;
+	font-size: 18px;
+	height: 55px;
+	width: 57%;
+  padding: 7px;
+}
+
+.webbtn{
+  border-radius: 30px;
+	color: white;
+	background-color: black;
+	font-size: 18px;
+	height: 45px;
+	width: 30%;
+  padding: 7px;
+}
+
+form{
+  margin: 50px auto;
+  position: relative;
+  width: 31%;
+  height: 13%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  padding-left: 5%;
+  padding-right: 3%;
+  overflow: hidden;
+  box-shadow: 1px 1px 15px rgba(0,0,0,0.4);
+  text-align: justify;
+  border-radius: 30px;
+  font-size: 23px;
+  color: white;
+}
+
+h1{
+	text-align: center;
+	color: white;
+}
+
+.webcam{
+  margin-top : 3%;
+}
+
+.upload{
+  margin-top : 5%;
+}
+
+
+
+.msg, p{
+  margin: 50px auto;
+  position: relative;
+  box-shadow: 1px 1px 15px rgba(0,0,0);
+  text-align: justify;
+  border-radius: 30px;
+  font-size: 20px;
+  color: white;
+  background-color: green;
+  text-align: center;
+  width: 50%;
+  height: 20%;
+}
+
+.index{
+  margin-top : 15%;
+}
+
+label{
+  padding-left: 5%;
+}
+
+table{
+  align: center;
+  width: 100%;
+  height: 300px;
+  padding-left: 20px;
+  padding-right: 25px;
+}
+
+th, td{
+  padding-left: 30px;
+}
+
+.imgup{
+  padding-left: 22%;
+  padding-bottom: 3%;
+  width: 55%;
+  height: 80%;
+}
+
+.webcamimg{
+  padding-left: 30%;
+  width: 40%;
+  height: 40%;
+}
+
+@media only screen and (max-device-width: 480px){
+button, .btn{
+	font-size: 17px;
+  width: 90%;
+  padding-top: 5px;
+}
+
+.webbtn{
+  width: 50%;
+}
+
+table{
+  width: 100%;
+  height: 150px;
+  padding: 1px;
+}
+h1{
+	text-align: center;
+	color: white;
+  margin-top: 25%;
+  padding: 20px;
+  font-size: 22px;
+}
+th{
+  padding-left: 1px;
+}
+form{
+  width: 88%;
+  font-size: 16px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.msg, p{
+  font-size: 16px;
+  width: 50%;
+}
+
+label{
+  padding-left: 0%;
+}
+
+}
