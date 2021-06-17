@@ -1,0 +1,2 @@
+# Facial-landmark-detection-using-Keras
+Facial keypoints (also called facial landmarks) are the small blue-green dots shown on each of the faces in the image above  - there are 5 keypoints marked in each image.  They mark important areas of the face - the eyes, corners of the mouth, the nose, etc.  Facial keypoints can be used in a variety of machine learning applications from face and emotion recognition to commercial applications like the image filters popularized by Snapchat. Facial keypoint detection is a regression problem.
