@@ -115,7 +115,7 @@ def detect_keypoints(image):
   # It takes 3 common arguments — the input image, scaleFactor, and minNeighbours
   # scaleFactor - specifying how much the image size is reduced at each image scale.
   # minNeighbors – specifying how many neighbors each candidate rectangle should have to retain it.
-  faces = face_cascade.detectMultiScale(gray_image)
+  faces = face_cascade.detectMultiScale(gray_image, 2, 6)
   
   # returns x axis, y axis, width and heidht of each faces detected using the detectMultiScale
   # The first two entries in the array (extracted in the above code as x and y) specify the horizontal and vertical positions of the top left corner of the bounding box. 
@@ -300,12 +300,17 @@ def landmark_video():
 			for x, y in zip(faces[0], faces[1]):
 			
 				# drwaing the circle in the landmarks
-				cv2.circle(detected_image, (int(x), int(y)), 5, (0,255,0),-1)
+				cv2.circle(detected_image, (int(x), int(y)), 4, (0,255,0),-1)
 			
-		ret, buffer = cv2.imencode('.jpg',frame)
+		# Convert the image to RGB chanels
+		detected_image = cv2.cvtColor(detected_image, cv2.COLOR_BGR2RGB)
+		# print('\nImage data :',image) # value in the form of pixel of array
+		# print("\nImage Data :",image.shape) # image size -> (96,96, 3) -> (n,n,nc)
+		# print("\nImage :\n",plt.imshow(image)) #->RGB image  with size (96,96, 3)
+	
+		ret, buffer = cv2.imencode('.jpg',detected_image)
 		frame = buffer.tobytes()
-		yield (b'--frame\r\n'
-		b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+		yield (b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 	
 		key = cv2.waitKey(1) & 0xFF
 	
