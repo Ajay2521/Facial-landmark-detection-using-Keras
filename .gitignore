@@ -1,0 +1,48 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables and virtual environments
+.env
+*.env
+venv/
+ENV/
+env/
+*.virtualenv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Flask-related files
+instance/
+*.db
+*.sqlite3
+
+# Pytest cache
+.pytest_cache/
+
+# Logs
+*.log
+
+# Cache and temporary files
+*.bak
+*.swp
+*.tmp
+*.old
+*.orig
+.cache/
+*.egg-info/
+eggs/
+dist/
+build/
+*.egg
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
